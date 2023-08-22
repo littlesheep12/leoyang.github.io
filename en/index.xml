@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lingyu&#39;s Blog</title>
+    <link>/en/</link>
+    <description>Recent content on Lingyu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me 🙋‍♂️</title>
+      <link>/en/about/</link>
+      <pubDate>Mon, 21 Aug 2023 09:44:36 -0700</pubDate>
+      
+      <guid>/en/about/</guid>
+      <description>class Me: def __init__(self): self.name = &#34;Lingyu Yang&#34; self.prefer_name = &#34;Leo&#34; self.born_year = 1999 self.MBTI = ISTJ self.hometown = &#34;Baoding, Hebei, CN&#34; self.curr_location = &#34;Seattle, WA, US&#34; self.grad_school = &#34;Northeastern University, Boston&#34; self.undergrad_school = &#34;Hebei University, Baoding&#34; copy</description>
+    </item>
+    
+  </channel>
+</rss>

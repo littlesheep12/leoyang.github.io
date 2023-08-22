@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lingyu&#39;s Blog</title>
+    <link>/zh/</link>
+    <description>Recent content on Lingyu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 21 Aug 2023 09:31:08 -0700</lastBuildDate><atom:link href="/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于我 🙋‍♂️</title>
+      <link>/zh/about/</link>
+      <pubDate>Mon, 21 Aug 2023 09:44:36 -0700</pubDate>
+      
+      <guid>/zh/about/</guid>
+      <description>class Me: def __init__(self): self.name = &#34;杨凌宇&#34; self.born_year = 1999 self.MBTI = ISTJ self.hometown = &#34;河北，保定&#34; self.curr_location = &#34;美国，西雅图&#34; self.grad_school = &#34;Northeastern University（美国东北大学）&#34; self.undergrad_school = &#34;河北大学&#34; copy</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>/zh/search/search/</link>
+      <pubDate>Mon, 21 Aug 2023 09:31:08 -0700</pubDate>
+      
+      <guid>/zh/search/search/</guid>
+      <description>first header </description>
+    </item>
+    
+  </channel>
+</rss>
