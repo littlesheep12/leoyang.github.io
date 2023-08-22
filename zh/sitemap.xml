@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/zh/about/</loc>
+    <loc>https://littlesheep12.github.io/leoyang.github.io/zh/about/</loc>
     <lastmod>2023-08-21T09:44:36-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/about/"
+                href="https://littlesheep12.github.io/leoyang.github.io/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/about/"
+                href="https://littlesheep12.github.io/leoyang.github.io/zh/about/"
                 />
   </url><url>
-    <loc>/zh/</loc>
+    <loc>https://littlesheep12.github.io/leoyang.github.io/zh/</loc>
     <lastmod>2023-08-21T09:31:08-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/"
+                href="https://littlesheep12.github.io/leoyang.github.io/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/"
+                href="https://littlesheep12.github.io/leoyang.github.io/zh/"
                 />
   </url><url>
-    <loc>/zh/search/search/</loc>
+    <loc>https://littlesheep12.github.io/leoyang.github.io/zh/search/search/</loc>
     <lastmod>2023-08-21T09:31:08-07:00</lastmod>
   </url><url>
-    <loc>/zh/search/</loc>
+    <loc>https://littlesheep12.github.io/leoyang.github.io/zh/search/</loc>
     <lastmod>2023-08-21T09:31:08-07:00</lastmod>
   </url><url>
-    <loc>/zh/categories/</loc>
+    <loc>https://littlesheep12.github.io/leoyang.github.io/zh/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/categories/"
+                href="https://littlesheep12.github.io/leoyang.github.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/categories/"
+                href="https://littlesheep12.github.io/leoyang.github.io/zh/categories/"
                 />
   </url><url>
-    <loc>/zh/series/</loc>
+    <loc>https://littlesheep12.github.io/leoyang.github.io/zh/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/series/"
+                href="https://littlesheep12.github.io/leoyang.github.io/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/series/"
+                href="https://littlesheep12.github.io/leoyang.github.io/zh/series/"
                 />
   </url><url>
-    <loc>/zh/tags/</loc>
+    <loc>https://littlesheep12.github.io/leoyang.github.io/zh/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/tags/"
+                href="https://littlesheep12.github.io/leoyang.github.io/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/"
+                href="https://littlesheep12.github.io/leoyang.github.io/zh/tags/"
                 />
   </url>
 </urlset>

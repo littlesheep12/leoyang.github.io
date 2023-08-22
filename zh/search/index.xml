@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Searches on Lingyu&#39;s Blog</title>
-    <link>/zh/search/</link>
+    <link>https://littlesheep12.github.io/leoyang.github.io/zh/search/</link>
     <description>Recent content in Searches on Lingyu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 21 Aug 2023 09:31:08 -0700</lastBuildDate><atom:link href="/zh/search/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Aug 2023 09:31:08 -0700</lastBuildDate><atom:link href="https://littlesheep12.github.io/leoyang.github.io/zh/search/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Search</title>
-      <link>/zh/search/search/</link>
+      <link>https://littlesheep12.github.io/leoyang.github.io/zh/search/search/</link>
       <pubDate>Mon, 21 Aug 2023 09:31:08 -0700</pubDate>
       
-      <guid>/zh/search/search/</guid>
+      <guid>https://littlesheep12.github.io/leoyang.github.io/zh/search/search/</guid>
       <description>first header </description>
     </item>
     
