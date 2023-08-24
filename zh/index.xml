@@ -6,7 +6,16 @@
     <description>Recent content on Lingyu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 21 Aug 2023 09:31:08 -0700</lastBuildDate><atom:link href="https://littlesheep12.github.io/leoyang.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Aug 2023 09:44:36 -0700</lastBuildDate><atom:link href="https://littlesheep12.github.io/leoyang.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django简介</title>
+      <link>https://littlesheep12.github.io/leoyang.github.io/zh/blog/django/</link>
+      <pubDate>Wed, 23 Aug 2023 09:44:36 -0700</pubDate>
+      
+      <guid>https://littlesheep12.github.io/leoyang.github.io/zh/blog/django/</guid>
+      <description>Django 诞生和发展 Django是高水准的Python编程语言驱动的一个开源模型．视图，控制器 (MVC) 风格的Web应用程序框架，它起源于开源社区 使用这种架</description>
+    </item>
+    
     <item>
       <title>关于我🙋🏻‍♂️</title>
       <link>https://littlesheep12.github.io/leoyang.github.io/zh/about/</link>

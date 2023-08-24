@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Django简介 | Lingyu&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Django 诞生和发展 Django是高水准的Python编程语言驱动的一个开源模型．视图，控制器 (MVC) 风格的Web应用程序框架，它起源于开源社区 使用这种架">
+<meta name="author" content="Leo">
+<link rel="canonical" href="https://littlesheep12.github.io/leoyang.github.io/zh/blog/django/">
+<meta name="google-site-verification" content="XYZabc">
+<link crossorigin="anonymous" href="/leoyang.github.io/assets/css/stylesheet.953d3e4c57799663dd1d519c1a7c808dcfc422bd74d9bb4e36c6f77895441c69.css" integrity="sha256-lT0&#43;TFd5lmPdHVGcGnyAjc/EIr102btONsb3eJVEHGk=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/leoyang.github.io/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://littlesheep12.github.io/leoyang.github.io/touxiang.jpeg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://littlesheep12.github.io/leoyang.github.io/touxiang.jpeg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://littlesheep12.github.io/leoyang.github.io/touxiang.jpeg">
+<link rel="apple-touch-icon" href="https://littlesheep12.github.io/leoyang.github.io/touxiang.jpeg">
+<link rel="mask-icon" href="https://littlesheep12.github.io/leoyang.github.io/touxiang.jpeg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://littlesheep12.github.io/leoyang.github.io/zh/blog/django/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><meta property="og:title" content="Django简介" />
+<meta property="og:description" content="Django 诞生和发展 Django是高水准的Python编程语言驱动的一个开源模型．视图，控制器 (MVC) 风格的Web应用程序框架，它起源于开源社区 使用这种架" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://littlesheep12.github.io/leoyang.github.io/zh/blog/django/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-08-23T09:44:36-07:00" />
+<meta property="article:modified_time" content="2023-08-23T09:44:36-07:00" /><meta property="og:site_name" content="Leo" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Django简介"/>
+<meta name="twitter:description" content="Django 诞生和发展 Django是高水准的Python编程语言驱动的一个开源模型．视图，控制器 (MVC) 风格的Web应用程序框架，它起源于开源社区 使用这种架"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://littlesheep12.github.io/leoyang.github.io/zh/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Django简介",
+      "item": "https://littlesheep12.github.io/leoyang.github.io/zh/blog/django/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Django简介",
+  "name": "Django简介",
+  "description": "Django 诞生和发展 Django是高水准的Python编程语言驱动的一个开源模型．视图，控制器 (MVC) 风格的Web应用程序框架，它起源于开源社区 使用这种架",
+  "keywords": [
+    
+  ],
+  "articleBody": "Django 诞生和发展 Django是高水准的Python编程语言驱动的一个开源模型．视图，控制器 (MVC) 风格的Web应用程序框架，它起源于开源社区 使用这种架构，程序员可以方便、快捷地创建高品质、易维护、数据库驱动的应用程序。这也正是OpenStack的Horizon组件采用这种架构进行设计的主要原因 另外，在Django框架中，还包含许多功能强大的第三方插件，使得Django具有较强的可扩展性 MVT设计原理 大多数的Web开发者对于MVC(Model, View, Controller) 设计模式不陌生，该设计模式已经成为Web框架中的标准，Django框架也遵循MVC设计模式的框架 但严格意义来讲，Django框架采用了一种更为特殊的MTV设计模式(Model, Template, View)，是从MVC模式变化而来 MTV 层次 职责 Model 模型（数据存取层） 处理与数据相关的所有业务：如何存取、如何验证有效性、如何处理数据之间关系等方面内容 Template 模版（表现层） 处理与表现相关的操作，包括如何在页面或其他类型文档中进行显示等方面的内容 View 视图（业务逻辑层） 存取模型及调取适当模版的相关逻辑等方面的内容，是M和T之间的桥梁 总结：\n从以上表述可以看出Django View不处理用户输入，而仅仅决定要展现哪些数据给用户，而Django Template 仅仅决定如何展现Django View指定的数据。 或者说，Django将MVC中的View进一步分解为 Django View 和 Django Template两个部分，分别决定 “展现哪些数据” 和 “如何展现”，使得Django的Template可以根据需要随时替换，而不仅仅限制于内置的Template 此外，MTV 模式还需要一个 URLconf，其作用是将 URL 页面请求分发给不同的 View去处理，然后View再调用相应的Model和 Template。这个 URL 分发器所实现的就是 MVC 模式下控制器（Controller）设计的功能。URL 分发器的设计机制是使用正则表达式来匹配 URL，然后再调用相应的 Python 函数方法。\n任何一个 Web 前端设计模式，都离不开控制器（Controller）这个模块，其代表着业务处理的核心部分。我们在 MTV 模式中看不到控制器（Controller）的设计，并不是 Django 框架没有设计该模块，而恰恰是将该模块的功能封装在底层了。这样做的好处就是，将开发人员从烦琐的控制层逻辑中解脱出来，通过编写更少的代码来实现用户需求，而控制层逻辑交由 Django 框架底层自动完成，大大地提高了开发人员的开发效率。\nDjango框架特点 Django的主要目的是简便、快速的开发数据库驱动的网站。它强调代码复用，多个组件可以很方便的以“插件”形式服务于整个框架，Django有许多功能强大的第三方插件，你甚至可以很方便的开发出自己的工具包。这使得Django具有很强的可扩展性。它还强调快速开发和DRY(Do Not Repeat Yourself)原则。\nDjango基于MVC的设计：\n基于Python以及MVC，具有开发快捷、低耦合、部署方便、可重用性高和维维护成本低等显著特点 对象关系映射 (ORM,object-relational mapping)：以Python类形式定义你的数据模型，ORM将模型与关系数据库连接起来，你将得到一个非常容易使用的数据库API，同时你也可以在Django中使用原始的SQL语句。 URL 分派：使用正则表达式匹配URL，你可以设计任意的URL，没有框架的特定限定。像你喜欢的一样灵活。 模版系统：使用Django强大而可扩展的模板语言，可以分隔设计、内容和Python代码。并且具有可继承性。 表单处理：你可以方便的生成各种表单模型，实现表单的有效性检验。可以方便的从你定义的模型实例生成相应的表单。 Cache系统：可以挂在内存缓冲或其它的框架实现超级缓冲 －－ 实现你所需要的粒度。 会话(session)，用户登录与权限检查，快速开发用户会话功能。 国际化：内置国际化系统，方便开发出多种语言的网站。 自动化的管理界面：不需要你花大量的工作来创建人员管理和更新内容。Django自带一个ADMIN site,类似于内容管理系统（CMS系统） 工作机制 在 Django 服务器启动时，会自动加载在同一目录下的配置文件（settings.py），该配置文件涵盖了项目所需的全部配置参数。其中，最重要的配置参数就是“ROOT_URLCONF”，定义了 Django 服务器使用哪个 Python 模块来用作本项目的 URLConf（一般默认为 urls.py）。 当用户在浏览器（Web Browser）中访问 url 时，Django 服务器会接收到一个 HTTP 请求，通过服务器端特定的 Handler（ModPythonHandler），创建 HttpRequest 并传递给中间组件（Request Midware）进行处理，这些中间组件起着功能增强的作用。 Django 服务器会根据 ROOT_URLCONF 配置的参数来加载 URLConf；然后按顺序逐个匹配 URLConf 中的 URLpatterns，如果匹配成功，则会调用相关联的 View 视图中间件函数，并将 HttpRequest 对象作为第一个参数向下传递；最后，通过 View 视图返回一个 HttpResponse 对象（通常是 Response）。 另外，Django 框架还实现了完整的异常处理机制，其主要是通过异常处理中间件（Exception Midware）来实现的。当系统出现异常时，异常处理中间件（Exception Midware）会截获并判断异常类型，从而返回异常错误（404 或 500 等）信息。 用户操作流程图 MVC Django 框架设计的 MTV 模式也是基于传统的 MVC 模式的，本质上也是为了各组件之间保持松耦合关系，只是定义上有些许不同。MVC 模式之所以能够成为 Web 框架最流行的设计标准，也是因为其比较完美地契合了用户的操作流程。 MVC 模式是软件工程中的一种通用的软件架构模式，同样也适用于 Web 应用程序。MVC 将 Web 框架分为三个基本部分：模型（Model）、视图（View）和控制器（Controller），并以一种插件式的、松耦合的方式连接在一起。 在 MVC 模式中，模型（Model）负责编写具体的程序功能，建立业务对象与数据库的映射（ORM）；视图（View）为图形界面，负责与用户的交互（HTML页面）；控制器（Controller）负责转发请求，并对请求进行处理。 MTV 用户通过浏览器向服务器端的 URL 分发器模块发起一个 URL 请求（request），这个 URL 请求会去访问视图函数(View.py）进行匹配，再进一步通过数据模型（Models）访问数据库进行数据操作，然后将操作结果逐级返回到模板（Template），并最终返回网页给用户\n",
+  "wordCount" : "2586",
+  "inLanguage": "zh",
+  "datePublished": "2023-08-23T09:44:36-07:00",
+  "dateModified": "2023-08-23T09:44:36-07:00",
+  "author":[{
+    "@type": "Person",
+    "name": "Leo"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://littlesheep12.github.io/leoyang.github.io/zh/blog/django/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lingyu's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://littlesheep12.github.io/leoyang.github.io/touxiang.jpeg"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://littlesheep12.github.io/leoyang.github.io/zh/" accesskey="h" title="Lingyu&#39;s Blog (Alt + H)">Lingyu&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://littlesheep12.github.io/leoyang.github.io/en/" title="English🇺🇸"
+                            aria-label="English🇺🇸">English🇺🇸</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://littlesheep12.github.io/leoyang.github.io/zh/about" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://littlesheep12.github.io/leoyang.github.io/zh/project" title="项目">
+                    <span>项目</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://littlesheep12.github.io/leoyang.github.io/zh/resume.pdf" title="简历">
+                    <span>简历</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://littlesheep12.github.io/leoyang.github.io/zh/blog" title="博客">
+                    <span>博客</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://littlesheep12.github.io/leoyang.github.io/zh/">主页</a>&nbsp;»&nbsp;<a href="https://littlesheep12.github.io/leoyang.github.io/zh/blog/">Blogs</a></div>
+    <h1 class="post-title">
+      Django简介
+    </h1>
+    <div class="post-meta"><span title='2023-08-23 09:44:36 -0700 PDT'>2023-08-23</span>&nbsp;·&nbsp;6 分钟&nbsp;·&nbsp;Leo
+
+</div>
+  </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+            <summary accesskey="c" title="(Alt + C)">
+                <span class="details">目录</span>
+            </summary>
+
+            <div class="inner"><ul>
+                    <li>
+                        <a href="#django" aria-label="Django">Django</a><ul>
+                            
+                    <li>
+                        <a href="#%e8%af%9e%e7%94%9f%e5%92%8c%e5%8f%91%e5%b1%95" aria-label="诞生和发展">诞生和发展</a></li>
+                    <li>
+                        <a href="#mvt%e8%ae%be%e8%ae%a1%e5%8e%9f%e7%90%86" aria-label="MVT设计原理">MVT设计原理</a><ul>
+                            
+                    <li>
+                        <a href="#mtv" aria-label="MTV">MTV</a></li></ul>
+                    </li>
+                    <li>
+                        <a href="#django%e6%a1%86%e6%9e%b6%e7%89%b9%e7%82%b9" aria-label="Django框架特点">Django框架特点</a></li>
+                    <li>
+                        <a href="#%e5%b7%a5%e4%bd%9c%e6%9c%ba%e5%88%b6" aria-label="工作机制">工作机制</a></li>
+                    <li>
+                        <a href="#%e7%94%a8%e6%88%b7%e6%93%8d%e4%bd%9c%e6%b5%81%e7%a8%8b%e5%9b%be" aria-label="用户操作流程图">用户操作流程图</a><ul>
+                            
+                    <li>
+                        <a href="#mvc" aria-label="MVC">MVC</a></li>
+                    <li>
+                        <a href="#mtv-1" aria-label="MTV">MTV</a>
+                    </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+         
+         activeElement = elements[0];
+         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+     }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+             const id = encodeURI(element.getAttribute('id')).toLowerCase();
+             if (element === activeElement){
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+             } else {
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+             }
+         })
+     }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;   
+    }
+</script>
+
+  <div class="post-content"><h1 id="django">Django<a hidden class="anchor" aria-hidden="true" href="#django">#</a></h1>
+<h2 id="诞生和发展">诞生和发展<a hidden class="anchor" aria-hidden="true" href="#诞生和发展">#</a></h2>
+<ul>
+<li>Django是高水准的Python编程语言驱动的一个开源模型．视图，控制器 (MVC) 风格的Web应用程序框架，它起源于开源社区</li>
+<li>使用这种架构，程序员可以方便、快捷地创建高品质、易维护、数据库驱动的应用程序。这也正是OpenStack的Horizon组件采用这种架构进行设计的主要原因</li>
+<li>另外，在Django框架中，还包含许多功能强大的第三方插件，使得Django具有较强的可扩展性</li>
+</ul>
+<h2 id="mvt设计原理">MVT设计原理<a hidden class="anchor" aria-hidden="true" href="#mvt设计原理">#</a></h2>
+<ul>
+<li>大多数的Web开发者对于MVC(Model, View, Controller) 设计模式不陌生，该设计模式已经成为Web框架中的标准，Django框架也遵循MVC设计模式的框架</li>
+<li>但严格意义来讲，Django框架采用了一种更为特殊的MTV设计模式(Model, Template, View)，是从MVC模式变化而来</li>
+</ul>
+<h3 id="mtv">MTV<a hidden class="anchor" aria-hidden="true" href="#mtv">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>职责</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model 模型（数据存取层）</td>
+<td>处理与数据相关的所有业务：如何存取、如何验证有效性、如何处理数据之间关系等方面内容</td>
+</tr>
+<tr>
+<td>Template 模版（表现层）</td>
+<td>处理与表现相关的操作，包括如何在页面或其他类型文档中进行显示等方面的内容</td>
+</tr>
+<tr>
+<td>View 视图（业务逻辑层）</td>
+<td>存取模型及调取适当模版的相关逻辑等方面的内容，是M和T之间的桥梁</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>总结：</p>
+<ul>
+<li>从以上表述可以看出Django View不处理用户输入，而仅仅决定要展现哪些数据给用户，而Django Template 仅仅决定如何展现Django View指定的数据。</li>
+<li>或者说，Django将MVC中的View进一步分解为 Django View 和 Django Template两个部分，分别决定 “展现哪些数据” 和 “如何展现”，使得Django的Template可以根据需要随时替换，而不仅仅限制于内置的Template</li>
+</ul>
+</li>
+<li>
+<p>此外，MTV 模式还需要一个 URLconf，其作用是将 URL 页面请求分发给不同的 View去处理，然后View再调用相应的Model和 Template。这个 URL 分发器所实现的就是 MVC 模式下控制器（Controller）设计的功能。URL 分发器的设计机制是使用正则表达式来匹配 URL，然后再调用相应的 Python 函数方法。</p>
+</li>
+<li>
+<p>任何一个 Web 前端设计模式，都离不开控制器（Controller）这个模块，其代表着业务处理的核心部分。我们在 MTV 模式中看不到控制器（Controller）的设计，并不是 Django 框架没有设计该模块，而恰恰是将该模块的功能封装在底层了。这样做的好处就是，将开发人员从烦琐的控制层逻辑中解脱出来，通过编写更少的代码来实现用户需求，而控制层逻辑交由 Django 框架底层自动完成，大大地提高了开发人员的开发效率。</p>
+</li>
+</ul>
+<div align=center>  <!-- 可选的项：right，left，center -->
+    <img src="4.png" width="" height="">  <!-- src处填写路径（本地或网络） width 和 height 就是控制图片的大小的-->
+</div>
+<h2 id="django框架特点">Django框架特点<a hidden class="anchor" aria-hidden="true" href="#django框架特点">#</a></h2>
+<p>Django的主要目的是简便、快速的开发数据库驱动的网站。它强调代码复用，多个组件可以很方便的以“插件”形式服务于整个框架，Django有许多功能强大的第三方插件，你甚至可以很方便的开发出自己的工具包。这使得Django具有很强的可扩展性。它还强调快速开发和DRY(Do Not Repeat Yourself)原则。</p>
+<p>Django基于MVC的设计：</p>
+<ul>
+<li>基于Python以及MVC，具有开发快捷、低耦合、部署方便、可重用性高和维维护成本低等显著特点</li>
+<li>对象关系映射 (<a href="https://baike.baidu.com/item/ORM?fromModule=lemma_inlink">ORM</a>,object-relational mapping)：以Python类形式定义你的数据模型，ORM将模型与关系数据库连接起来，你将得到一个非常容易使用的数据库API，同时你也可以在Django中使用原始的SQL语句。</li>
+<li>URL 分派：使用<a href="https://baike.baidu.com/item/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F?fromModule=lemma_inlink">正则表达式</a>匹配URL，你可以设计任意的URL，没有框架的特定限定。像你喜欢的一样灵活。</li>
+<li>模版系统：使用Django强大而可扩展的模板语言，可以分隔设计、内容和Python代码。并且具有可继承性。</li>
+<li>表单处理：你可以方便的生成各种表单模型，实现表单的有效性检验。可以方便的从你定义的模型实例生成相应的表单。</li>
+<li>Cache系统：可以挂在内存缓冲或其它的框架实现超级缓冲 －－ 实现你所需要的粒度。</li>
+<li>会话(<a href="https://baike.baidu.com/item/session?fromModule=lemma_inlink">session</a>)，用户登录与权限检查，快速开发用户会话功能。</li>
+<li>国际化：内置国际化系统，方便开发出多种语言的网站。</li>
+<li>自动化的管理界面：不需要你花大量的工作来创建人员管理和更新内容。Django自带一个ADMIN site,类似于<a href="https://baike.baidu.com/item/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F?fromModule=lemma_inlink">内容管理系统</a>（CMS系统）</li>
+</ul>
+<h2 id="工作机制">工作机制<a hidden class="anchor" aria-hidden="true" href="#工作机制">#</a></h2>
+<ul>
+<li>在 Django 服务器启动时，会自动加载在同一目录下的配置文件（settings.py），该配置文件涵盖了项目所需的全部配置参数。其中，最重要的配置参数就是“ROOT_URLCONF”，定义了 Django 服务器使用哪个 Python 模块来用作本项目的 URLConf（一般默认为 urls.py）。</li>
+<li>当用户在浏览器（Web Browser）中访问 url 时，Django 服务器会接收到一个 HTTP 请求，通过服务器端特定的 Handler（ModPythonHandler），创建 HttpRequest 并传递给中间组件（Request Midware）进行处理，这些中间组件起着功能增强的作用。</li>
+<li>Django 服务器会根据 ROOT_URLCONF 配置的参数来加载 URLConf；然后按顺序逐个匹配 URLConf 中的 URLpatterns，如果匹配成功，则会调用相关联的 View 视图中间件函数，并将 HttpRequest 对象作为第一个参数向下传递；最后，通过 View 视图返回一个 HttpResponse 对象（通常是 Response）。</li>
+<li>另外，Django 框架还实现了完整的异常处理机制，其主要是通过异常处理中间件（Exception Midware）来实现的。当系统出现异常时，异常处理中间件（Exception Midware）会截获并判断异常类型，从而返回异常错误（404 或 500 等）信息。</li>
+</ul>
+<div align=center>  <!-- 可选的项：right，left，center -->
+    <img src="1.png" width="" height="">  <!-- src处填写路径（本地或网络） width 和 height 就是控制图片的大小的-->
+</div>
+<h2 id="用户操作流程图">用户操作流程图<a hidden class="anchor" aria-hidden="true" href="#用户操作流程图">#</a></h2>
+<h3 id="mvc">MVC<a hidden class="anchor" aria-hidden="true" href="#mvc">#</a></h3>
+<ul>
+<li>Django 框架设计的 MTV 模式也是基于传统的 MVC 模式的，本质上也是为了各组件之间保持松耦合关系，只是定义上有些许不同。MVC 模式之所以能够成为 Web 框架最流行的设计标准，也是因为其比较完美地契合了用户的操作流程。</li>
+<li>MVC 模式是软件工程中的一种通用的软件架构模式，同样也适用于 Web 应用程序。MVC 将 Web 框架分为三个基本部分：模型（Model）、视图（View）和控制器（Controller），并以一种插件式的、松耦合的方式连接在一起。</li>
+<li>在 MVC 模式中，模型（Model）负责编写具体的程序功能，建立业务对象与数据库的映射（ORM）；视图（View）为图形界面，负责与用户的交互（HTML页面）；控制器（Controller）负责转发请求，并对请求进行处理。</li>
+</ul>
+<div align=center>  <!-- 可选的项：right，left，center -->
+    <img src="2.png" width="" height="">  <!-- src处填写路径（本地或网络） width 和 height 就是控制图片的大小的-->
+</div>
+<h3 id="mtv-1">MTV<a hidden class="anchor" aria-hidden="true" href="#mtv-1">#</a></h3>
+<p>用户通过浏览器向服务器端的 URL 分发器模块发起一个 URL 请求（request），这个 URL 请求会去访问视图函数(View.py）进行匹配，再进一步通过数据模型（Models）访问数据库进行数据操作，然后将操作结果逐级返回到模板（Template），并最终返回网页给用户</p>
+<div align=center>  <!-- 可选的项：right，left，center -->
+    <img src="3.png" width="" height="">  <!-- src处填写路径（本地或网络） width 和 height 就是控制图片的大小的-->
+</div>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://littlesheep12.github.io/leoyang.github.io/zh/">Lingyu&#39;s Blog</a></span>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        Vistiors : <span id="busuanzi_value_site_uv"></span>
+        Views: <span id="busuanzi_value_site_pv"></span>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
